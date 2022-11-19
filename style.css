@@ -1,0 +1,167 @@
+/*
+=================================
+Importing fonts from google fonts
+=================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/*
+==================
+Defining variables 
+==================
+*/
+
+:root {
+    --card-top: rgb(255, 255, 255);
+    --card: #fff;
+    --green-blue: rgb(66, 221, 182);
+    --font: #282828;
+}
+
+/* 
+========================
+Defining global settings
+========================
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 
+====================
+Navbar customization
+====================
+*/
+
+h4 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: var(--green-blue)
+}
+
+nav {
+    display: grid;
+    align-items: center;
+    background-color: #333333;
+    padding: 1rem;
+    
+}
+
+nav a {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+nav a:hover {
+    color: var(--green-blue)
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+
+/*
+=======================
+Container customization
+=======================
+*/
+
+main {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+    background-color: darkcyan;
+}
+
+.container {
+    text-align: center;
+}
+
+.color {
+    cursor: pointer;
+}
+
+.btn {
+    color: antiquewhite;
+    background-color: #282828;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.card {
+    box-shadow: 1px 1px 5px #282828;
+    border-radius: 1rem;
+    
+}
+
+.card-top {
+    width: 21.875rem;
+    height: 18.75rem;   
+    background-color: var(--card);
+    border-radius: 1rem 1rem 0px 0px;
+}
+
+.card-center {
+    width: 20rem;
+    height: 17.188rem;
+    background-color:var(--card-top);
+    border-radius: 1rem;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 3.75rem;
+    margin: auto;
+}
+
+.card-bottom {
+    width: 21.875rem;
+    height: 7.5rem;
+    background-color: var(--card);
+    color: var(--font);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0px 0px 1rem 1rem;
+    margin-bottom: 8px;
+}
+
+/*
+====================
+Footer customization
+====================
+*/
+
+footer {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
