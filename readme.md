@@ -17,6 +17,6 @@ There are 3 (three) options available: **Basic**, **Hex** and **RGB**.
 - [  ] Color history;
 - [  ] Random pallete generator;
 
-####Special thanks
+#### Special thanks
 * [@freeCodeCamp.org](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=1812s) for the project's idea;
 * [@bospace](https://gist.github.com/bobspace) for the 'CSS named colors' snippet.
