@@ -11,7 +11,7 @@ There are 3 (three) options available: **Basic**, **Hex** and **RGB**.
 * The RGB mode displays a random color using the RGB (Red, Green, Blue) method.
 
 #### Future features
-- [x] Full CSS responsiviness;
+- [x] Full CSS responsiveness;
 - [  ] Hotkeys functionality;
 - [  ] Better looking pop-up alert when copying color to clipboard.
 - [  ] Color history;
