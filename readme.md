@@ -1,6 +1,8 @@
 ## CSS Color Flipper
 _A simple color flipper. Click on the "Random Button" to generate a new color._
 
+![screenshot_01](https://user-images.githubusercontent.com/100087975/203208670-5522f013-ba85-493b-8420-ff54a1d55ce5.png)
+
 #### Features
 
 By deafault, every card starts as a _'clean card'_ (simple white-colored card).
