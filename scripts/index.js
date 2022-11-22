@@ -164,19 +164,29 @@ const magicArr = [
 ];
 const mageArr = ["👨‍💻", "🥷", "🧙‍♂️"];
 
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
 // Defining variables
 const btn = document.getElementById('btn');
 const cardInfo = document.getElementById('card')
 const color = document.querySelector(".color");
 const card = document.querySelector(":root");
+const cardCenter = document.getElementById('card');
 const mage = document.getElementById('mage');
 const magic = document.getElementById('magic');
 
 //Defining functions
-color.addEventListener('click', function(){
+cardCenter.addEventListener('click', function(){
     navigator.clipboard.writeText(color.textContent);
-    alert(`Copied ${color.textContent}`)
-})
+    alert(`Copied ${color.textContent}`);
+});
 
 btn.addEventListener('click', function(){
     //get random number between 0 and 3;
