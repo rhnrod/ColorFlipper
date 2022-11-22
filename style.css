@@ -5,19 +5,6 @@ Importing fonts from google fonts
 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/*
-==================
-Defining variables 
-==================
-*/
-
-:root {
-    --card-top: rgb(255, 255, 255);
-    --card: #fff;
-    --green-blue: rgb(66, 221, 182);
-    --font: #282828;
-}
-
 /* 
 ========================
 Defining global settings
@@ -33,6 +20,44 @@ Defining global settings
   font-family: 'Poppins', sans-serif;
 }
 
+/*
+==================
+Defining variables 
+==================
+*/
+
+:root {
+    --card-top: rgb(255, 255, 255);
+    --card: #fff;
+    --green-blue: rgb(66, 221, 182);
+    --h4-font: 2rem;
+    --nav-a: 1.3rem;
+    --nav-disp: grid;
+    --icon: 45px;
+    --gap-links: 10px;
+    --border-style: hidden;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --h4-font: 1.8rem;
+    };
+}
+
+@media (max-width: 560px) {
+    :root {
+        --h4-font: 1.2rem;
+        --nav-a: 1.1rem;
+        --icon: 30px;
+        --gap-links: 3px; 
+    };
+}
+
+@media (max-width:560px) {
+    nav {
+        padding: 1rem;
+    };
+}
 /* 
 ====================
 Navbar customization
@@ -40,49 +65,124 @@ Navbar customization
 */
 
 h4 {
-    font-size: 2rem;
+    font-size: var(--h4-font);
+    color: var(--green-blue);
     margin-left: 1rem;
-    color: var(--green-blue)
 }
 
 nav {
-    display: grid;
-    align-items: center;
     background-color: #333333;
     padding: 1rem;
-    
 }
 
 nav a {
     text-transform: capitalize;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: var(--nav-a);
     margin-right: 1rem;
     text-decoration: none;
     color: #fff;
-
+    transition: 0.7s ease;
 }
 
 nav a:hover {
-    color: var(--green-blue)
+    color: var(--green-blue);
 }
 
-.logo {
+ul {
+    list-style-type: none;
+}
+
+.logo > a {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
-.nav-center {
+.logo-ico {
+    width: var(--icon);
+}
+
+.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    gap: var(--gap-links);
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 3px auto;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 64px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #333333;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        margin: 12px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
 
 /*
 =======================
@@ -118,14 +218,17 @@ main {
 .card {
     box-shadow: 1px 1px 5px #282828;
     border-radius: 1rem;
+    background-color: var(--card);
     
 }
 
 .card-top {
     width: 21.875rem;
-    height: 18.75rem;   
+    height: 1.75rem;   
     background-color: var(--card);
     border-radius: 1rem 1rem 0px 0px;
+    text-align: end;
+    padding-right: 5%;
 }
 
 .card-center {
@@ -133,12 +236,13 @@ main {
     height: 17.188rem;
     background-color:var(--card-top);
     border-radius: 1rem;
-    position: absolute;
+    border: 1px hidden var(--border-style);
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 3.75rem;
     margin: auto;
+    cursor: pointer;
 }
 
 .card-bottom {
